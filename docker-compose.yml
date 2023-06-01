@@ -1,0 +1,15 @@
+version: '24.0.2'
+
+services:
+  cybercraft:
+    container_name: cybercraft-container
+    image: cybercraft
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+
+
